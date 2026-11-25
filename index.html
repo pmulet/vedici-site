@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vedici — Quantitative Technology</title>
+<meta name="description" content="Vedici is a quantitative technology firm. We build mathematical models, automate investment and turn financial data into intelligence.">
+<meta name="theme-color" content="#0C0D12">
+<meta property="og:title" content="Vedici — Quantitative Technology">
+<meta property="og:description" content="Mathematics, applied to markets.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vedici.tech/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* VOICE: formal, discreet, few words. Authority through restraint.
+   IDEA: an engraved founding charter for a firm built on mathematics.
+   PICTURE: a Monte Carlo fan of simulated price paths radiating from the Vedici mark.
+   COLOUR and TYPE: Medallion — near-black ground, lila #8A90DA, indigo #5860B0; Cormorant Garamond over Inter.
+   LAYOUT: wide hero with the fan as a full-bleed band, then calm stacked sections, a legal footer. */
+:root{color-scheme:dark;--bg:#0C0D12;--sf:#15171F;--ink:#ECEDF2;--mu:#9A9EB0;--br:#8A90DA;--in:#5860B0;--ln:#262A36}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 'Inter',system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:var(--br);text-decoration:none}a:hover{color:var(--ink)}
+a:focus-visible{outline:2px solid var(--br);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 max(5vw,20px)}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.05;margin:0;text-wrap:balance}
+h1{font-size:clamp(40px,6vw,72px)}
+h2{font-size:clamp(32px,4vw,46px)}
+h3{font-size:26px}
+p{margin:0;max-width:62ch}
+.lead{font-size:18px;color:var(--mu)}
+.mu{color:var(--mu)}
+header{position:sticky;top:0;z-index:10;background:rgba(12,13,18,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img.m{height:38px;width:auto}.brand img.w{height:22px;width:auto}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{color:var(--mu);font-size:15px;padding:12px 12px;min-height:44px;display:inline-flex;align-items:center}
+nav a:hover{color:var(--ink)}
+.hero{padding:clamp(56px,9vw,120px) 0 0}
+.hero .copy{display:grid;gap:24px}
+.fig{position:relative;height:clamp(260px,34vw,420px);margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--ln);border-bottom:1px solid var(--ln);overflow:hidden}
+.fig svg{position:absolute;inset:0;width:100%;height:100%}
+.fig .cap{position:absolute;right:max(5vw,20px);bottom:14px;font-size:13px;color:var(--mu)}
+.band{padding:clamp(56px,8vw,112px) 0;border-bottom:1px solid var(--ln)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(28px,5vw,80px);align-items:start}
+.list{display:grid;gap:0;border-top:1px solid var(--ln)}
+.list div{display:grid;grid-template-columns:minmax(0,13em) minmax(0,1fr);gap:24px;padding:22px 0;border-bottom:1px solid var(--ln)}
+.list h3{font-size:24px;color:var(--ink)}
+.quote{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(40px,7vw,88px);line-height:1;color:var(--br)}
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--ln);border:1px solid var(--ln);margin-top:36px}
+.roles div{background:var(--bg);padding:24px;display:grid;gap:6px}
+.roles strong{font-weight:500}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:4px;font-weight:500;font-size:15px}
+.btn.p{background:var(--br);color:#0C0D12}.btn.p:hover{background:var(--ink);color:#0C0D12}
+.btn.s{border:1px solid var(--ln);color:var(--ink)}.btn.s:hover{border-color:var(--br)}
+.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.offices{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;margin-top:8px}
+.offices h3{font-size:28px;margin-bottom:6px}
+footer{padding:48px 0 56px;font-size:13px;color:var(--mu)}
+footer .top{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid var(--ln);margin-bottom:24px}
+footer img{height:70px;width:auto}
+footer p{max-width:90ch;margin-bottom:12px}
+@media(max-width:760px){.two{grid-template-columns:minmax(0,1fr)}.list div{grid-template-columns:minmax(0,1fr);gap:6px}.brand img.w{display:none}nav a{padding:12px 8px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fig path{animation:none!important;stroke-dashoffset:0!important}}
+@keyframes draw{to{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Vedici home"><img class="m" src="assets/vedici-mark-lila.svg" alt=""><img class="w" src="assets/vedici-wordmark-white.svg" alt="Vedici"></a>
+    <nav aria-label="Main">
+      <a href="#firm">Firm</a>
+      <a href="#approach">Approach</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap copy">
+      <h1>Mathematics,<br>applied to markets.</h1>
+      <p class="lead">Vedici is a quantitative technology firm. We build mathematical models, automate investment and turn financial data into intelligence.</p>
+    </div>
+    <div class="fig" role="img" aria-label="Illustration of simulated price paths fanning out from a single starting point">
+      <svg id="fan" aria-hidden="true"></svg>
+      <span class="cap">Illustrative Monte Carlo simulation</span>
+    </div>
+  </section>
+
+  <section class="band" id="firm">
+    <div class="wrap two">
+      <h2>The firm</h2>
+      <div style="display:grid;gap:20px">
+        <p>Vedici researches, designs and runs systematic strategies across financial markets. Every decision starts as a hypothesis and is accepted only after it survives data, simulation and risk control.</p>
+        <p class="mu">We are a long-term undertaking. The firm is built to be owned by the people who build it, and to compound knowledge as patiently as it compounds capital.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="approach">
+    <div class="wrap two">
+      <h2>Approach</h2>
+      <div class="list">
+        <div><h3>We develop models</h3><p class="mu">Statistical and machine-learning models of price, volatility and risk, tested out of sample before they touch capital.</p></div>
+        <div><h3>We automate investment</h3><p class="mu">Execution is systematic and disciplined. Position sizing follows the mathematics, not the mood of the day.</p></div>
+        <div><h3>We provide intelligence</h3><p class="mu">Processed financial data, risk simulations and actionable signals for institutions that need decisions tailored to their portfolios.</p></div>
+        <div><h3>We invest in people</h3><p class="mu">Scientists, engineers and operators who share our values. Talent is the only edge that compounds without limit.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="name">
+    <div class="wrap two">
+      <p class="quote">Veni, vidi, vici.</p>
+      <div style="display:grid;gap:20px">
+        <h2>The name</h2>
+        <p class="mu">In 47 BC, after the battle of Zela, Julius Caesar reported his victory to the Roman Senate in three words. Vedici takes its name from them: a reminder that speed and clarity, applied with discipline, win.</p>
+        <p class="mu">Conquering today.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="careers">
+    <div class="wrap">
+      <div class="two">
+        <h2>Careers</h2>
+        <div style="display:grid;gap:20px">
+          <p>We are assembling a small team of exceptional people. No finance background is required; rigour, curiosity and integrity are.</p>
+          <div class="acts"><a class="btn p" href="https://www.linkedin.com/company/vedici-tech/" rel="noopener">Follow us on LinkedIn</a></div>
+        </div>
+      </div>
+      <div class="roles">
+        <div><strong>Data Scientists</strong><span class="mu">Statistics, time series, experimentation.</span></div>
+        <div><strong>AI / ML Engineers</strong><span class="mu">Models from research to production.</span></div>
+        <div><strong>Software Engineers</strong><span class="mu">Low-latency systems, data pipelines.</span></div>
+        <div><strong>Operations &amp; Legal</strong><span class="mu">Compliance, accounting, administration.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="contact">
+    <div class="wrap two">
+      <h2>Contact</h2>
+      <div style="display:grid;gap:28px">
+        <div class="offices">
+          <div><h3>Madrid</h3><p class="mu">Spain</p></div>
+          <div><h3>Guatemala City</h3><p class="mu">Guatemala</p></div>
+        </div>
+        <p class="mu">General enquiries: <a href="mailto:info@vedici.tech">info@vedici.tech</a></p>
+        <div class="acts"><a class="btn s" href="https://www.linkedin.com/company/vedici-tech/" rel="noopener">LinkedIn</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top"><img src="assets/vedici-full-lila.svg" alt="Vedici — Conquering today"><span>© <span id="yr">2026</span> Vedici Capital Growth, S.L.</span></div>
+    <p>Vedici Capital Growth, S.L. · NIF B70762539 · Registered in the Registro Mercantil de Madrid, Spain.</p>
+    <p>The information on this website is provided for general information only. It is not an offer or solicitation to buy or sell any security, fund or investment service, and it is not investment advice. Vedici does not accept investments from the public. Past performance does not guarantee future results.</p>
+    <p>vedici.tech is the only official website of Vedici.</p>
+  </div>
+</footer>
+
+<script>
+{
+  const s = document.getElementById('fan');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Seeded PRNG so the picture is identical on every load
+  const rng = (seed => () => (seed = (seed * 16807) % 2147483647) / 2147483647)(47);
+  const gauss = () => { let u = 0, v = 0; while (!u) u = rng(); while (!v) v = rng(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
+  const N = 64, STEPS = 120;
+  const paths = [];
+  for (let i = 0; i < N; i++) {
+    let x = 0; const pts = [0];
+    for (let t = 1; t <= STEPS; t++) { x += 0.0009 + 0.028 * gauss(); pts.push(x); }
+    paths.push(pts);
+  }
+  const finals = paths.map(p => p[STEPS]).sort((a, b) => a - b);
+  const med = finals[Math.floor(N / 2)];
+  const medIdx = paths.findIndex(p => p[STEPS] === med);
+  const lim = Math.max(...paths.flat().map(Math.abs)) * 1.05;
+  const draw = () => {
+    const W = s.clientWidth, H = s.clientHeight;
+    if (!W || !H) return;
+    const x0 = W * 0.06, x1 = W * 0.98, y = v => H / 2 - (v / lim) * (H * 0.46);
+    const d = p => p.map((v, t) => (t ? 'L' : 'M') + (x0 + (x1 - x0) * t / STEPS).toFixed(1) + ' ' + y(v).toFixed(1)).join('');
+    let out = '<line x1="' + x0 + '" y1="' + H / 2 + '" x2="' + x1 + '" y2="' + H / 2 + '" stroke="#262A36" stroke-dasharray="2 6"/>';
+    paths.forEach((p, i) => {
+      if (i === medIdx) return;
+      const len = W * 1.6;
+      out += '<path d="' + d(p) + '" fill="none" stroke="#5860B0" stroke-opacity="' + (0.22 + 0.25 * rng()).toFixed(2) + '" stroke-width="1" stroke-dasharray="' + len + '" stroke-dashoffset="' + (reduce ? 0 : len) + '" style="animation:draw 2.4s ' + (i * 18) + 'ms cubic-bezier(.2,.7,.2,1) forwards"/>';
+    });
+    out += '<path d="' + d(paths[medIdx]) + '" fill="none" stroke="#8A90DA" stroke-width="2" stroke-dasharray="' + W * 1.6 + '" stroke-dashoffset="' + (reduce ? 0 : W * 1.6) + '" style="animation:draw 2.8s 400ms cubic-bezier(.2,.7,.2,1) forwards"/>';
+    out += '<circle cx="' + x0 + '" cy="' + H / 2 + '" r="5" fill="#8A90DA"/>';
+    s.innerHTML = out;
+  };
+  let lastW = 0;
+  const fanObserver = new ResizeObserver(() => { if (Math.abs(s.clientWidth - lastW) > 40) { lastW = s.clientWidth; draw(); } });
+  fanObserver.observe(s);
+  document.getElementById('yr').textContent = new Date().getFullYear();
+}
+</script>
+</body>
+</html>
